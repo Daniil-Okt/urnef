@@ -3,6 +3,7 @@
    $name = $_POST['name'];
    $phone = $_POST['tel'];
    $mail = $_POST['mail'];
+   $text = $_POST['text'];
    $radioStatus = $_POST['radioStatus'];
    $radioСontract = $_POST['radioСontract'];
    $radioDocument = $_POST['radioDocument'];
@@ -26,7 +27,8 @@
   $message .= "Имя пользователя: $name\n";
   $message .= "Телефон: $phone\n";
   $message .= "E-mail: $mail\n";
-  $message .= "__ОТВЕТЫ НА ВОПРОССЫ КВИЗА:__";
+  $message .= "Комментарий: $text\n";
+  $message .= "__ОТВЕТЫ НА ВОПРОССЫ КВИЗА:__\n";
   $message .= "Статус дела: $radioStatus\n";
   $message .= "Между сторонами заключен договор: $radioСontract\n";
   $message .= "Закрывающие документы: $radioDocument\n";
