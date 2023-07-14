@@ -21,8 +21,13 @@ export function validForm(form, popupTranks) {
                   if (response.ok) {
                     // Обработка успешной отправки формы
                     console.log('Form was submitted successfully!');
-                    popupTranks.classList.add('_is-open')
+                    if(form.id ='about__form') {
+                      document.querySelector('.button-slider-first').click()
+                    } else {
+                      popupTranks.classList.add('_is-open')
+                    }
                     form.reset()
+                    
                   } else {
                     // Обработка ошибок отправки формы
                     console.log('An error occurred while submitting the form.');
@@ -40,6 +45,7 @@ export function validForm(form, popupTranks) {
             input.addEventListener('input', function() {
               if (input.value.length > 0) {
                     formRemoveError(input);
+                    input.parentElement.classList.add('_ok')
               }
           });
           });
@@ -89,6 +95,8 @@ export function validForm(form, popupTranks) {
       function formAddError(input) {
           input.parentElement.classList.add('_error')
           input.classList.add('_error')
+          input.parentElement.classList.remove('_ok')
+
       }
       function formRemoveError(input) {
           input.parentElement.classList.remove('_error')

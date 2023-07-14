@@ -63,5 +63,29 @@ input.text {
 input._error {
     border: 1px solid #E60000;
 }
+input, input::placeholder {
+    font-size: rem(15);
+}
+._ok input {
+    border: 1px solid #1E8E31;
 
+}
 
+.error-text {
+    font-size: rem(16);
+    margin-bottom: rem(10);
+    color: #E60000;
+    display: none;
+    ._error & {
+        display: block;
+    }
+}
+ label.reqlab {
+    transition: color 0.3s ease  0s;
+    ._error & {
+        display: none;
+    }
+    ._ok & {
+        color: #1E8E31;
+    }
+}

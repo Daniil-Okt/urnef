@@ -22,7 +22,7 @@ import BurgerMenu from './modules/BurgerMenu';
 
 // import AOS from 'aos'
 
-// import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 /* Проверка поддержки webp, добавление класса webp или no-webp для HTML
  ! (i) необходимо для корректного отображения webp из css
@@ -82,8 +82,116 @@ useDynamicAdapt()
 * Добавить класс .popup-thanks для модального окна спасибо
   Раскоментировать для использования
 */ 
-// import { validForm } from './modules/validFrom.js'
+import { validForm } from './modules/validFrom.js'
 // const popupTranks = document.querySelector('.popup-thanks')
-// const formNAME = document.getElementById('form-NAME')
-// validForm(fromName, popupTranks)
+const formAbout = document.getElementById('about__form')
+validForm(formAbout)
 // =======================================================================================================
+
+
+//  Получаем все input элементы
+const inputs = document.querySelectorAll('input[type="radio"]');
+// Добавляем обработчик события "change" для каждого input элемента
+inputs.forEach(input => {
+  // Получаем соответствующий label элемент для текущего input элемента
+  const label = document.querySelector(`label[for="${input.id}"]`);
+  if (input.checked) {
+    label.classList.add('active');
+  }
+  input.addEventListener('click', () => {
+    inputs.forEach(int => {
+      const lab = document.querySelector(`label[for="${int.id}"]`);
+      if (int.name === input.name) {
+          lab.classList.remove('active');
+       } 
+    })
+
+    // Добавляем или удаляем класс "active" в зависимости от состояния "checked"
+    if (input.checked) {
+      label.classList.add('active');
+    } else {
+      label.classList.remove('active');
+    }
+  });
+});
+
+
+// Находим все элементы input с типом checkbox
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+// Проходимся по каждому checkbox
+checkboxes.forEach((checkbox) => {
+  // Добавляем обработчик события 'click'
+  checkbox.addEventListener('click', () => {
+    // Находим связанный label
+    // Проверяем состояние checkbox
+    if (checkbox.checked) {
+      // Если checkbox отмечен, добавляем класс "active" к item
+      checkbox.parentElement.classList.add('active');
+    } else {
+      // Если checkbox не отмечен, удаляем класс "active" у item
+      checkbox.parentElement.classList.remove('active');
+    }
+  });
+});
+
+
+
+window.addEventListener("DOMContentLoaded", function() {
+  [].forEach.call( document.querySelectorAll('.tel'), function(input) {
+    var keyCode;
+    function mask(event) {
+      event.keyCode && (keyCode = event.keyCode);
+      var pos = this.selectionStart;
+      if (pos < 3) event.preventDefault();
+      var matrix = "+7 (___) ___-__-__",
+          i = 0,
+          def = matrix.replace(/\D/g, ""),
+          val = this.value.replace(/\D/g, ""),
+          new_value = matrix.replace(/[_\d]/g, function(a) {
+              return i < val.length ? val.charAt(i++) : a
+          });
+      i = new_value.indexOf("_");
+      if (i != -1) {
+          i < 5 && (i = 3);
+          new_value = new_value.slice(0, i)
+      }
+      var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+          function(a) {
+              return "\\d{1," + a.length + "}"
+          }).replace(/[+()]/g, "\\$&");
+      reg = new RegExp("^" + reg + "$");
+      if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
+        this.value = new_value;
+      }
+      if (event.type == "blur" && this.value.length < 5) {
+        this.value = "";
+      }
+    }
+
+    input.addEventListener("input", mask, false);
+    input.addEventListener("focus", mask, false);
+    input.addEventListener("blur", mask, false);
+    input.addEventListener("keydown", mask, false);
+
+  });
+
+});
+
+
+
+const swiper = new Swiper('.about__swiper', {
+  speed: 400,
+  spaceBetween: 100,
+  modules: [Navigation],
+  navigation: {
+    nextEl:'.slider-cheked__buttom-next, .slider-cheked__buttom-miss, .slider-first__button',
+    prevEl: '.slider-cheked__buttom-back',
+  },
+  touchRatio: false, 
+  autoHeight: true,
+});
+
+
+
+

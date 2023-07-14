@@ -1,6 +1,7 @@
 .about {
-    border-bottom: 1px solid #8A8A8A;
-
+    @media(min-width:728px){
+        max-height: 790px;
+    }
     &__container {
     }
 
@@ -9,12 +10,23 @@
     }
 
     &__wrapper {
+        min-height: 100%;
+        min-width: 100%;
+        @media(min-width:728px){
+            max-height: 795px;
+            min-height: none;
+        }
     }
 
     &__slide {
-        min-width: 100%;
+        // min-height: 100%;
+        // height: 100%;
+        // max-height: rem(1280);
+        
     }
-
+    .swiper-slide {
+        
+    }
     &__slider-first {
     }
 
@@ -24,7 +36,14 @@
     &__button {
     }
 }
+.about__slide.swiper-slide {
+    
+}
+.swiper-slide {
+    min-height: 100%;
+}
 .slider-first {
+    
     @include adaptiveClamp(padding-top, 130, 40);
     @include adaptiveClamp(padding-bottom, 130, 70);
     
@@ -204,6 +223,7 @@
         height: rem(6);
         border-radius: 36px;
         background: #D9D9D9;
+        max-width: rem(588);
         &::before {
             position: absolute;
             content: '';
@@ -212,6 +232,7 @@
             background: #1E8E31;
             top:0;
             left: 0;
+            transition: width 0.5s ease  0.5s;
         }
     }
 
@@ -251,6 +272,7 @@
             transition: all 0.3s ease  0s;
             opacity: 0;
         }
+
     }
 
     // &__radio-input {
@@ -269,19 +291,62 @@
         // width: 100%;
         // height: 100%;
         display: none;
-    
-        &:checked {
-            display: block;
-            & + .slider-cheked__radio-label::after {
-                opacity: 1;
-            }
-    
-            & + .slider-cheked__radio-label {
-                font-weight: 700;
-            }
+        &__buttom-next.button {
+            font-size: rem(20);
         }
     }
-    
+    .slider-cheked__radio-label.active {
+        font-weight: 700;
+        &::after {
+            opacity: 1;
+        }
+    }
+    &__checkbox-label {
+        display: inline-block;
+        position: relative;
+        padding-left: rem(36);
+        transition: all 0.3s ease  0s;
+        @include adaptiveClamp(font-size, 20, 17);
+        &::before {
+            position: absolute;
+            display: inline-block;
+            content: '';
+            width: rem(20);
+            height: rem(20);
+            background-color: $whiteColor;
+            border-radius: 2px;
+            border: 1px solid #D9D9D9;
+            box-shadow: $btnBoxShadow;
+            top:rem(2);
+            left: 0;
+        }
+        &::after {
+            display: inline-block;
+            position: absolute;
+            content: '';
+            width: rem(15);
+            height: rem(15);
+            background: url(@img/icon-checkbox.svg) no-repeat center center / contain;
+            top:rem(4);
+            left: rem(2.5);
+            transition: all 0.3s ease  0s;
+            opacity: 0;
+        }
+    }
+    &__checkbox-input {
+        position: absolute;
+        width: rem(200);
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    .active .slider-cheked__checkbox-label {
+        font-weight: 700;
+        &::after {
+            opacity: 1;
+        }
+    }
 
     &__item {
         position: relative;
@@ -316,16 +381,33 @@
         height: rem(50);
         background: none;
         border: 1px solid #1E8E31;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        img {
+            width: rem(18);
+            // height: rem(5);
+            position: relative;
+            
+        }
     }
     &__buttom-next {
         padding: rem(13) rem(17);
         max-width: rem(93);
     }
+    &__buttom-send {
+        display: block;
+        height: rem(50);
+        padding: rem(13) rem(17);
+        max-width: rem(102);
+        font-size: rem(17);
+    }
 
     &__buttom-miss {
         cursor: pointer;
         font-size: rem(15);
+        
         color: #9B9B9B;
         transition: all 0.3s ease  0s;
         &:hover {
@@ -347,6 +429,10 @@
     border-radius: 5px;
     border: 1px solid #D9D9D9;
     width: rem(282);
+    margin-left: rem(20);
+    @media(max-width:727px){
+        margin-left: 0;
+    }
     &__img {
         width: rem(40);
         @media(max-width:727px){
@@ -364,6 +450,31 @@
         padding: rem(24);
     }
 }
+.slider-cheked {
+    &__label {
+        margin-top: rem(40);
+        display: block;
+        font-size: rem(17);
+        font-weight: 700;
+        margin-bottom: rem(10);
+    }
+    &__sub-text {
+        margin-top: rem(10);
+        font-weight: 300;
+        font-size: rem(17);
+    }
+    &__input.text {
+        padding: rem(18) rem(15);
+        margin-right: rem(50);
+        @media(max-width:727px){
+            max-width: rem(540);
+        }
+    } 
+    .slider-cheked__buttom-next {
+        font-size: rem(20);
+        font-weight: 400;
+    }
+}
 
 .slider-cheked1 {
     .slider-cheked__buttom-back {
@@ -372,14 +483,15 @@
     .slider-cheked__buttom-next {
         margin-left: rem(50);
     }
+    .slider-cheked__button-row {
+        @include adaptiveClamp(margin-top, 80, 40);
+    }
 }
 
 .slider-cheked2 {
     .slider-cheked__button-row {
-        margin-top: auto;
-        @media(max-width:727px){
-            margin-top: rem(105);
-        }
+        @include adaptiveClamp(margin-top, 123, 75);
+
     }
     .slider-cheked__line {
         &::before {
@@ -389,10 +501,7 @@
 }
 .slider-cheked3 {
     .slider-cheked__button-row {
-        margin-top: auto;
-        @media(max-width:727px){
-            margin-top: rem(105);
-        }
+        @include adaptiveClamp(margin-top, 128, 80);
     }
     .slider-cheked__line {
         &::before {
@@ -400,16 +509,96 @@
         }
     }
 }
+.slider-cheked4 {
+    .slider-cheked__button-row {
+        @include adaptiveClamp(margin-top, 121, 73);
+    }
+    .slider-cheked__line {
+        &::before {
+            width: 66.666%;
+        }
+    }
+}
 .slider-cheked5 {
     .slider-cheked__button-row {
-        margin-top: auto;
-        @media(max-width:727px){
-            margin-top: rem(105);
-        }
+        @include adaptiveClamp(margin-top, 101, 53);
     }
     .slider-cheked__line {
         &::before {
             width: 83.333%;
         }
+    }
+   
+}
+
+.slider-cheked6 {
+    .slider-cheked__button-row {
+        margin-top: auto;
+        @media(max-width:727px){
+            margin-top: rem(20);
+        }
+    }
+    .slider-cheked__line {
+        &::before {
+            width: 100%;
+        }
+    }
+    .slider-cheked__input {
+        margin-bottom: rem(20);
+    }
+   
+}
+
+.slider-cheked7 {
+    .slider-cheked__button-row {
+        @include adaptiveClamp(margin-top, 88, 40);
+    }
+    .slider-cheked__line {
+        &::before {
+            width: 100%;
+        }
+    }
+    .slider-cheked__input {
+        margin-bottom: rem(20);
+    }
+   
+}
+
+
+.slider-tranks {
+    @include adaptiveClamp(padding-top, 145, 70);
+    @include adaptiveClamp(padding-bottom, 150, 130);
+    display: flex;
+    align-items: center;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include adaptiveClamp(gap, 30, 20);
+        margin: auto;
+    }
+
+    &__title {
+        text-align: center;
+        @media(max-width:680px){
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__text {
+        font-size: rem(17);
+        text-align: center;
+    }
+
+    &__button-row {
+    }
+
+    &__button {
+        display: block;
+        max-width: rem(480);
+        padding: rem(20) rem(30);
     }
 }
