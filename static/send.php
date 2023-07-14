@@ -16,9 +16,9 @@
   
    //Отправка в Telegram
   
-   $token = "6175032800:AAEjE6ZY2gFttQ6RC4peVyi7mou72IHciA4";
+   $token = "5993704145:AAFFkIdkwV2VznoZIY7Lhwaf_stBfE1Do0A";
    
-   $chat_id = "-862719183";
+   $chat_id = "-1001902841040";
    
   
    // Формирование текста сообщения
