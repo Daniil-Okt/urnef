@@ -1,0 +1,272 @@
+// =====================================================================================================================
+.header {
+  position: sticky;
+  width: 100%;
+  font-size: rem(17);
+  z-index: 10;
+  border-bottom: 1px solid #8A8A8A;
+  &.sticky {
+    // ..стили для липкого хедера
+  }
+
+  // .header__container
+  &__container {
+    height: rem(89);
+    max-width: rem(1200);
+    display: flex;
+    align-items: center;
+    @media(max-width:767px){
+      height: rem(70);
+    }
+  }
+
+  &__logo {
+    font-size: rem(34);
+    font-weight: 700;
+    margin-right: rem(16);
+    @media(max-width:767px){
+        margin-right: auto;
+    }
+  }
+
+  &__text {
+    font-size: rem(17);
+    @media(max-width:1195px){
+        display: none;
+    }
+  }
+
+  &__menu {
+  }
+
+  &__quest {
+  }
+
+  &__contact {
+  }
+  &__open-menu {
+    position: fixed;
+    top: rem(90);
+    right: -100%;
+    padding: rem(30) rem(50);
+    background-color: $whiteColor;
+    display: flex;
+    flex-direction: column;
+    z-index: 150;
+    transition: right 0.5s ease  0s;
+    @media(max-width:767px){
+      top: rem(71);
+    }
+    @media(max-width:560px){
+        width: 100%;
+    }
+    .menu-open & {
+      right: 0;
+    }
+  }
+}
+.logo {
+}
+.menu {
+  margin: 0 rem(30);
+  @media(max-width:1195px){
+    margin: 0 auto;
+  }
+  @media(max-width:767px){
+      margin: 0 0 rem(17) 0;
+
+  }
+  &__list {
+    display: flex;
+    gap: rem(15);
+    @media(max-width:767px){
+        flex-direction: column;
+        gap: 0;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    margin: 0;
+    transition: all 0.3s ease  0s;
+    
+    @media(max-width:767px){
+        padding: rem(16) 0;
+        text-align: right;
+        &:hover {
+          margin: 0 rem(-50);
+          padding: rem(16) rem(50);
+          background-color: #F5F5F5;
+        }
+    }
+    @media(max-width:560px){
+      text-align: center;
+    }
+    
+  }
+
+  &__link {
+    transition: all 0.3s ease  0s;
+    &:hover {
+      color: #0c506c;
+    }
+    @media(max-width:767px){
+      font-size: rem(20);
+      &:hover {
+        color: #000000;
+      }
+  }
+  @media(max-width:560px){
+      font-size: rem(17);
+  }
+  }
+}
+.quest-header {
+  display: flex;
+  gap: rem(7);
+  align-items: center;
+  @media(max-width:520px){
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: rem(30);
+    br {
+      display: none;
+    }
+  }
+  &__text {
+    font-size: rem(17);
+    @media(max-width:560px){
+        
+    }
+  }
+
+  &__icon-row {
+    display: flex;
+    gap: rem(5);
+  }
+
+  &__icon {
+    width: rem(30);
+    height: rem(30);
+    border-radius: 50%;
+    background-color: #168FC0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease  0s;
+    img {
+      width: rem(15);
+    }
+  }
+
+  &__icon-telegram {
+
+    &:hover {
+      background-color: #1690c0ec;
+    }
+    &:active {
+      background-color: rgb(12, 138, 187);
+    }
+  }
+
+
+  &__icon-whatapp {
+    background-color: #2DB475;
+    &:hover {
+      background-color: #2db475e9;
+    }
+    &:active {
+      background-color: #22b973;
+    }
+  }
+}
+
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin-left: rem(30);
+  @media(max-width:560px){
+      text-align: center;
+      margin-left: 0;
+  }
+  &__number {
+    font-size: rem(28);
+    &:hover {
+      color: #0c506c;
+    }
+  }
+
+  &__adress {
+    &:hover {
+      color: #0c506c;
+    }
+  }
+
+  &__mail {
+    text-decoration: underline;
+    &:hover {
+      color: #0c506c;
+      text-decoration: underline;
+    }
+  }
+
+}
+
+// =====================================================================================================================
+
+// Burger
+
+.icon-menu {
+  display: none;
+  @include media(1195) {
+    display: block;
+    position: relative;
+    margin-left: rem(20);
+    width: rem(30);
+    height: rem(18);
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 5;
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 500ms ease 0ms;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #000;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      top: calc(50% - rem(1));
+    }
+
+    .menu-open & {
+      span {
+        width: 0;
+      }
+
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
