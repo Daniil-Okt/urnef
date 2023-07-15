@@ -1,6 +1,5 @@
 <?php 
    $site = 'URNEFP';
-   $name = $_POST['name'];
    $phone = $_POST['tel'];
    $mail = $_POST['mail'];
    $text = $_POST['text'];
@@ -24,19 +23,41 @@
   
    // Формирование текста сообщения
   $message = "Заявка с сайта: $site\n";
-  $message .= "Имя пользователя: $name\n";
-  $message .= "Телефон: $phone\n";
-  $message .= "E-mail: $mail\n";
-  $message .= "Комментарий: $text\n";
+  if ($phone != '') {
+    $message .= "Телефон: $phone\n";
+  }
+  if ($mail != '') {
+    $message .= "E-mail: $mail\n";
+  }
+  if ($text != '') {
+    $message .= "Комментарий: $text\n";
+  }
+  $message .= "------------------------------------------\n";
   $message .= "__ОТВЕТЫ НА ВОПРОССЫ КВИЗА:__\n";
+if ($radioStatus != '') {
   $message .= "Статус дела: $radioStatus\n";
+}
+if ($radioСontract != '') {
   $message .= "Между сторонами заключен договор: $radioСontract\n";
+}
+if ($radioDocument != '') {
   $message .= "Закрывающие документы: $radioDocument\n";
+}
+if ($textSum != '') {
   $message .= "Сумма задолженности: $textSum\n";
+}
+if ($radioRegistration != '') {
   $message .= "Компания зарегистрирована: $radioRegistration\n";
+}
+if ($textCompany1 != '') {
   $message .= "ИНН компании: $textCompany1\n";
+}
+if ($textCompany2 != '') {
   $message .= "ИНН компании контрагента: $textCompany2\n";
+}
+if ($checkboxConnect1 != '' || $checkboxConnect2 != ''|| $checkboxConnect3 ) {
   $message .= "Хочу что бы со мной связались: $checkboxConnect1, $checkboxConnect2, $checkboxConnect3";
+}
   // Добавьте еще необходимые поля в сообщение, если нужно
   
   // Отправка запроса в Телеграм
