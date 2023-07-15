@@ -6,6 +6,7 @@
    $text = $_POST['text'];
    $radioStatus = $_POST['radioStatus'];
    $radioСontract = $_POST['radioСontract'];
+   $radioСontract2 = $_POST['radioСontract2'];
    $radioDocument = $_POST['radioDocument'];
    $textSum = $_POST['textSum'];
    $textSum2 = $_POST['textSum'];
@@ -76,9 +77,11 @@ if ($radioClaim != '') {
 if ($textRequir != '') {
   $message .= "Сумма требования: $textRequir\n";
 }
+
 if ($radioСontract != '') {
   $message .= "Между сторонами заключен договор: $radioСontract\n";
 }
+
 if ($radioDocument != '') {
   $message .= "Закрывающие документы: $radioDocument\n";
 }
