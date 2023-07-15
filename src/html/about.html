@@ -1,7 +1,7 @@
 <div class="about" id="about">
     <form action="#" class="about__form" id="about__form">
-        <div class="about__swiper">
-            <div class="about__wrapper swiper-wrapper">
+        <div class="about__swiper swiper-first">
+            <div class="about__wrapper swiper-wrapper ">
                 <div class="about__slide about__slider-first slider-first swiper-slide">
                     <div class="slider-first__container">
                         <h1 class="slider-first__title">Получите анализ и процент успешности дела 
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="about__slide about__slider-cheked slider-cheked slider-cheked1 swiper-slide">
-                    <div class="slider-cheked__container">
+                    <div class="slider-cheked__container" >
                         <div class="slider-cheked__pagination">
                             <div class="slider-cheked__number">1/6</div>
                             <div class="slider-cheked__line"></div>
@@ -59,29 +59,29 @@
                         <div class="slider-cheked__row">
                             <div class="slider-cheked__body">
                                 
-                                <h3 class="slider-cheked__title">Статус вашего дела:</h3>
+                                <h3 class="slider-cheked__title" data-aos="fade-right">Статус вашего дела:</h3>
                                 <div class="slider-cheked__item">
                                     <label for="radioStatus1" class="slider-cheked__radio-label">Только хотите подать в суд</label>
-                                    <input type="radio" id="radioStatus1" name="radioStatus" value="Только хочу подать в суд" class="slider-cheked__radio-input">
+                                    <input type="radio" checked id="radioStatus1" name="radioStatus" value="Только хочу подать в суд" class="slider-cheked__radio-input input-scen">
                                 </div>
                                 <div class="slider-cheked__item">
                                     <label for="radioStatus2" class="slider-cheked__radio-label">Уже подали в суд</label>
-                                    <input type="radio" id="radioStatus2" name="radioStatus" value="Уже подал в суд" class="slider-cheked__radio-input">
+                                    <input type="radio" id="radioStatus2" name="radioStatus" value="Уже подал в суд" class="slider-cheked__radio-input input-scen">
                                 </div>
                                 <div class="slider-cheked__item">
                                     <label for="radioStatus3" class="slider-cheked__radio-label">На вас только хотят подать в суд</label>
-                                    <input type="radio" id="radioStatus3" name="radioStatus" value="На меня только хотят подать в суд" class="slider-cheked__radio-input">
+                                    <input type="radio" id="radioStatus3" name="radioStatus" value="На меня только хотят подать в суд" class="slider-cheked__radio-input input-scen">
                                 </div>
                                 <div class="slider-cheked__item">
                                     <label for="radioStatus4" class="slider-cheked__radio-label">На вас уже подали в суд</label>
-                                    <input type="radio" id="radioStatus4" name="radioStatus" value="На меня уже подали в суд" class="slider-cheked__radio-input">
+                                    <input type="radio" id="radioStatus4" name="radioStatus" value="На меня уже подали в суд" class="slider-cheked__radio-input input-scen">
                                 </div>
                                 <div class="slider-cheked__button-row">
                                     <div class="slider-cheked__buttom-back buttom-back button">
                                         <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
                                     </div>
-                                    <div class="slider-cheked__buttom-next button">Далее</div>
-                                    <div class="slider-cheked__buttom-miss">Пропустить</div>
+                                    <div class="slider-cheked__buttom-scen button">Далее</div>
+                                    
                                 </div>
                             </div>
                             <div class="slider-cheked__row-card">
@@ -102,6 +102,10 @@
                     
                     
                 </div>
+            </div>
+        </div>
+        <div class="about__swiper swiper-scen swiper-scen1">
+            <div class="about__wrapper swiper-wrapper ">
                 <div class="about__slide about__slider-cheked slider-cheked slider-cheked2 swiper-slide">
                     <div class="slider-cheked__container">
                         <div class="slider-cheked__pagination">
@@ -125,11 +129,11 @@
                                     <input type="radio" id="radioСontract3" name="radioСontract" value="Затрудняюсь ответить" class="slider-cheked__radio-input">
                                 </div>
                                 <div class="slider-cheked__button-row">
-                                    <div class="slider-cheked__buttom-back buttom-back button">
+                                    <div class="slider-cheked__buttom-back slider-cheked__buttom-back-scen buttom-back button">
                                         <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
                                     </div>
-                                    <div class="slider-cheked__buttom-next button">Далее</div>
-                                    <div class="slider-cheked__buttom-miss">Пропустить</div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next1 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss1">Пропустить</div>
                                 </div>
                             </div>
                             <div class="slider-cheked__row-card">
@@ -173,8 +177,8 @@
                                     <div class="slider-cheked__buttom-back buttom-back button">
                                         <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
                                     </div>
-                                    <div class="slider-cheked__buttom-next button">Далее</div>
-                                    <div class="slider-cheked__buttom-miss">Пропустить</div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next1 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss1">Пропустить</div>
                                 </div>
                             </div>
                             <div class="slider-cheked__row-card">
@@ -216,8 +220,8 @@
                                     <div class="slider-cheked__buttom-back buttom-back button">
                                         <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
                                     </div>
-                                    <div class="slider-cheked__buttom-next button">Далее</div>
-                                    <div class="slider-cheked__buttom-miss">Пропустить</div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next1 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss1">Пропустить</div>
                                 </div>
                             </div>
                             <div class="slider-cheked__row-card">
@@ -265,8 +269,8 @@
                                     <div class="slider-cheked__buttom-back buttom-back button">
                                         <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
                                     </div>
-                                    <div class="slider-cheked__buttom-next button">Далее</div>
-                                    <div class="slider-cheked__buttom-miss">Пропустить</div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next1 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss1">Пропустить</div>
                                 </div>
                             </div>
                             <div class="slider-cheked__row-card">
@@ -312,8 +316,644 @@
                                     <div class="slider-cheked__buttom-back buttom-back button">
                                         <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
                                     </div>
-                                    <div class="slider-cheked__buttom-next button">Далее</div>
-                                    <div class="slider-cheked__buttom-miss">Пропустить</div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next1 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss1">Пропустить</div>
+                                </div>
+                            </div>
+                            <div class="slider-cheked__row-card">
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card1.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Опыт работы 30 лет</p>
+                                </div>
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card2.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Разумная стоимость</p>
+                                </div> <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card3.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Работаем под ключ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="about__slide about__slider-cheked slider-cheked slider-cheked7 swiper-slide">
+                    <div class="slider-cheked__container">
+                        <div class="slider-cheked__row">
+                            <div class="slider-cheked__body">
+                                <h3 class="slider-cheked__title">Укажите комфортный способ связи</h3> 
+                                <div class="slider-cheked__item">
+                                    <div class="slider-cheked__error-text error-text">Заполните телефон:</div>
+                                    <label for="kwisForm" class="slider-cheked__label reqlab">Напишите свой номер телефона</label>
+                                    <input type="text" id="kwisForm" name="tel" class="slider-cheked__input tel text _req" placeholder="+7 (___) ___-__-__">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="checkboxConnect1" class="slider-cheked__checkbox-label" data-label-class="slider-cheked__checkbox-label">Телефонный разговор с адвокатом (+Бесплатная консультация)</label>
+                                    <input type="checkbox" id="checkboxConnect1" name="checkboxConnect1" value="Телефонный разговор с адвокатом (+Бесплатная консультация)" class="slider-cheked__checkbox-input">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="checkboxConnect2" class="slider-cheked__checkbox-label" data-label-class="slider-cheked__checkbox-label">WhatsApp</label>
+                                    <input type="checkbox" id="checkboxConnect2" name="checkboxConnect2" value="WhatsApp" class="slider-cheked__checkbox-input">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="checkboxConnect3" class="slider-cheked__checkbox-label" data-label-class="slider-cheked__checkbox-label">Telegram</label>
+                                    <input type="checkbox" id="checkboxConnect3" name="checkboxConnect3" value="Telegram" class="slider-cheked__checkbox-input">
+                                </div>
+                            
+                                <div class="slider-cheked__button-row">
+                                    <div class="slider-cheked__buttom-back buttom-back button">
+                                        <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
+                                    </div>
+                                    <button class="slider-cheked__buttom-send button">Готово!</button>
+                                </div>
+                            </div>
+                            <div class="slider-cheked__row-card">
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card1.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Опыт работы 30 лет</p>
+                                </div>
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card2.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Разумная стоимость</p>
+                                </div> <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card3.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Работаем под ключ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="about__slide about__slider-tranks slider-tranks swiper-slide">
+                    <div class="slider-tranks__container">
+                        <h3 class="slider-tranks__title">Ответы приняты в обработку, мы свяжемся
+                        </br>с вами в течение одного рабочего дня</h3>
+                        <div class="slider-tranks__text">Пока мы анализируем вашу ситуацию, переходите
+                        </br>в наш ТГ канал</div>
+                        <div class="slider-tranks__button-row">
+                            <a href="https://t.me/kodekspravo" class="slider-tranks__button button blue">Перейти в наш ТГ канал и посмотреть кейсы</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about__swiper swiper-scen swiper-scen2">
+            <div class="about__wrapper swiper-wrapper ">
+                <div class="about__slide about__slider-cheked slider-cheked slider-cheked4 swiper-slide">
+                    <div class="slider-cheked__container">
+                        <div class="slider-cheked__pagination">
+                            <div class="slider-cheked__number">2/4</div>
+                            <div class="slider-cheked__line fist"></div>
+                        </div>
+                        <div class="slider-cheked__row">
+                            <div class="slider-cheked__body">
+                                
+                                <h3 class="slider-cheked__title">Напишите номер вашего дела</h3>
+                                <div class="slider-cheked__item">
+                                    <label for="textSum" class="slider-cheked__label">Номер дела</label>
+                                    <input type="text" id="textSum" name="textNumberDocum" class="slider-cheked__input text">
+                                    <div class="slider-cheked__sub-text">*Например 2-3-34/2023.</div>
+                                </div>
+
+                                
+                                <div class="slider-cheked__button-row">
+                                    <div class="slider-cheked__buttom-back slider-cheked__buttom-back-scen buttom-back button">
+                                        <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
+                                    </div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next2 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss2">Пропустить</div>
+                                </div>
+                            </div>
+                            <div class="slider-cheked__row-card">
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card1.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Опыт работы 30 лет</p>
+                                </div>
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card2.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Разумная стоимость</p>
+                                </div> <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card3.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Работаем под ключ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="about__slide about__slider-cheked slider-cheked slider-cheked2 swiper-slide">
+                    <div class="slider-cheked__container">
+                        <div class="slider-cheked__pagination">
+                            <div class="slider-cheked__number">2/4</div>
+                            <div class="slider-cheked__line two"></div>
+                        </div>
+                        <div class="slider-cheked__row">
+                            <div class="slider-cheked__body">
+                               
+                                <h3 class="slider-cheked__title">Причина вашего обращения</h3>
+                                <div class="slider-cheked__item">
+                                    <label for="radioReason" class="slider-cheked__radio-label">Нет представителя в суде</label>
+                                    <input type="radio" id="radioReason" name="radioReason" value="Нет представителя в суде" class="slider-cheked__radio-input">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="radioReason2" class="slider-cheked__radio-label">Не устраивает квалификация представителя</label>
+                                    <input type="radio" id="radioReason2" name="radioReason" value="Не устраивает квалификация представителя" class="slider-cheked__radio-input">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="radioReason3" class="slider-cheked__radio-label">Другое</label>
+                                    <input type="radio" id="radioReason3" name="radioReason" value="другое" class="slider-cheked__radio-input">
+                                </div>
+                                <div class="slider-cheked__button-row">
+                                    <div class="slider-cheked__buttom-back slider-cheked__buttom-back-scen buttom-back button">
+                                        <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
+                                    </div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next2 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss2">Пропустить</div>
+                                </div>
+                            </div>
+                            <div class="slider-cheked__row-card">
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card1.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Опыт работы 30 лет</p>
+                                </div>
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card2.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Разумная стоимость</p>
+                                </div> <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card3.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Работаем под ключ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="about__slide about__slider-cheked slider-cheked slider-cheked4 swiper-slide">
+                    <div class="slider-cheked__container">
+                        <div class="slider-cheked__pagination">
+                            <div class="slider-cheked__number">3/4</div>
+                            <div class="slider-cheked__line for"></div>
+                        </div>
+                        <div class="slider-cheked__row">
+                            <div class="slider-cheked__body">
+                                
+                                <h3 class="slider-cheked__title">Напишите сумму задолженности</h3>
+                                <div class="slider-cheked__item">
+                                    <label for="textSum" class="slider-cheked__label">Сумма задолженности</label>
+                                    <input type="text" id="textSum" name="textSum" class="slider-cheked__input text">
+                                    <div class="slider-cheked__sub-text">*Например 1 000 000р.</div>
+                                </div>
+
+                                
+                                <div class="slider-cheked__button-row">
+                                    <div class="slider-cheked__buttom-back buttom-back button">
+                                        <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
+                                    </div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next2 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss2">Пропустить</div>
+                                </div>
+                            </div>
+                            <div class="slider-cheked__row-card">
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card1.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Опыт работы 30 лет</p>
+                                </div>
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card2.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Разумная стоимость</p>
+                                </div> <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card3.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Работаем под ключ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="about__slide about__slider-cheked slider-cheked slider-cheked7 swiper-slide">
+                    <div class="slider-cheked__container">
+                        <div class="slider-cheked__row">
+                            <div class="slider-cheked__body">
+                                <h3 class="slider-cheked__title">Укажите комфортный способ связи</h3> 
+                                <div class="slider-cheked__item">
+                                    <div class="slider-cheked__error-text error-text">Заполните телефон:</div>
+                                    <label for="kwisForm" class="slider-cheked__label reqlab">Напишите свой номер телефона</label>
+                                    <input type="text" id="kwisForm" name="tel" class="slider-cheked__input tel text _req" placeholder="+7 (___) ___-__-__">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="checkboxConnect1" class="slider-cheked__checkbox-label" data-label-class="slider-cheked__checkbox-label">Телефонный разговор с адвокатом (+Бесплатная консультация)</label>
+                                    <input type="checkbox" id="checkboxConnect1" name="checkboxConnect1" value="Телефонный разговор с адвокатом (+Бесплатная консультация)" class="slider-cheked__checkbox-input">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="checkboxConnect2" class="slider-cheked__checkbox-label" data-label-class="slider-cheked__checkbox-label">WhatsApp</label>
+                                    <input type="checkbox" id="checkboxConnect2" name="checkboxConnect2" value="WhatsApp" class="slider-cheked__checkbox-input">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="checkboxConnect3" class="slider-cheked__checkbox-label" data-label-class="slider-cheked__checkbox-label">Telegram</label>
+                                    <input type="checkbox" id="checkboxConnect3" name="checkboxConnect3" value="Telegram" class="slider-cheked__checkbox-input">
+                                </div>
+                            
+                                <div class="slider-cheked__button-row">
+                                    <div class="slider-cheked__buttom-back buttom-back button">
+                                        <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
+                                    </div>
+                                    <button class="slider-cheked__buttom-send button">Готово!</button>
+                                </div>
+                            </div>
+                            <div class="slider-cheked__row-card">
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card1.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Опыт работы 30 лет</p>
+                                </div>
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card2.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Разумная стоимость</p>
+                                </div> <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card3.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Работаем под ключ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="about__slide about__slider-tranks slider-tranks swiper-slide">
+                    <div class="slider-tranks__container">
+                        <h3 class="slider-tranks__title">Ответы приняты в обработку, мы свяжемся
+                        </br>с вами в течение одного рабочего дня</h3>
+                        <div class="slider-tranks__text">Пока мы анализируем вашу ситуацию, переходите
+                        </br>в наш ТГ канал</div>
+                        <div class="slider-tranks__button-row">
+                            <a href="https://t.me/kodekspravo" class="slider-tranks__button button blue">Перейти в наш ТГ канал и посмотреть кейсы</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about__swiper swiper-scen swiper-scen3">
+            <div class="about__wrapper swiper-wrapper ">
+                
+                <div class="about__slide about__slider-cheked slider-cheked slider-cheked3 swiper-slide">
+                    <div class="slider-cheked__container">
+                        <div class="slider-cheked__pagination">
+                            <div class="slider-cheked__number">2/5</div>
+                            <div class="slider-cheked__line fist"></div>
+                        </div>
+                        <div class="slider-cheked__row">
+                            <div class="slider-cheked__body">
+                                
+                                <h3 class="slider-cheked__title">Вам уже прислали претензию?</h3>
+                                <div class="slider-cheked__item fist">
+                                    <label for="radioClaim1" class="slider-cheked__radio-label">Да</label>
+                                    <input type="radio" id="radioClaim1" name="radioClaim" value="Да" class="slider-cheked__radio-input">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="radioClaim2" class="slider-cheked__radio-label">Нет</label>
+                                    <input type="radio" id="radioClaim2" name="radioClaim" value="Нет" class="slider-cheked__radio-input">
+                                </div>
+                                <div class="slider-cheked__button-row">
+                                    <div class="slider-cheked__buttom-back slider-cheked__buttom-back-scen buttom-back button">
+                                        <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
+                                    </div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next1 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss1">Пропустить</div>
+                                </div>
+                            </div>
+                            <div class="slider-cheked__row-card">
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card1.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Опыт работы 30 лет</p>
+                                </div>
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card2.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Разумная стоимость</p>
+                                </div> <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card3.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Работаем под ключ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="about__slide about__slider-cheked slider-cheked slider-cheked4 swiper-slide">
+                    <div class="slider-cheked__container">
+                        <div class="slider-cheked__pagination">
+                            <div class="slider-cheked__number">3/5</div>
+                            <div class="slider-cheked__line two"></div>
+                        </div>
+                        <div class="slider-cheked__row">
+                            <div class="slider-cheked__body">
+                                
+                                <h3 class="slider-cheked__title">Напишите сумму требования</h3>
+                                <div class="slider-cheked__item">
+                                    <label for="textRequir" class="slider-cheked__label">Сумма требования</label>
+                                    <input type="text" id="textRequir" name="textRequir" class="slider-cheked__input text">
+                                    <div class="slider-cheked__sub-text">*Например 1 000 000р.</div>
+                                </div>
+
+                                
+                                <div class="slider-cheked__button-row">
+                                    <div class="slider-cheked__buttom-back buttom-back button">
+                                        <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
+                                    </div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next1 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss1">Пропустить</div>
+                                </div>
+                            </div>
+                            <div class="slider-cheked__row-card">
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card1.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Опыт работы 30 лет</p>
+                                </div>
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card2.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Разумная стоимость</p>
+                                </div> <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card3.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Работаем под ключ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="about__slide about__slider-cheked slider-cheked slider-cheked4 swiper-slide">
+                    <div class="slider-cheked__container">
+                        <div class="slider-cheked__pagination">
+                            <div class="slider-cheked__number">4/5</div>
+                            <div class="slider-cheked__line three"></div>
+                        </div>
+                        <div class="slider-cheked__row">
+                            <div class="slider-cheked__body">
+                                
+                                <h3 class="slider-cheked__title">Опишите предмет спора</h3>
+                                <div class="slider-cheked__item">
+                                    <label for="textSum" class="slider-cheked__label">Опишите предмет спора</label>
+                                    <input type="text" id="textSpor" name="textSpor" class="slider-cheked__input text">
+                                    <div class="slider-cheked__sub-text"></div>
+                                </div>
+
+                                
+                                <div class="slider-cheked__button-row">
+                                    <div class="slider-cheked__buttom-back buttom-back button">
+                                        <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
+                                    </div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next1 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss1">Пропустить</div>
+                                </div>
+                            </div>
+                            <div class="slider-cheked__row-card">
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card1.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Опыт работы 30 лет</p>
+                                </div>
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card2.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Разумная стоимость</p>
+                                </div> <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card3.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Работаем под ключ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="about__slide about__slider-cheked slider-cheked slider-cheked2 swiper-slide">
+                    <div class="slider-cheked__container">
+                        <div class="slider-cheked__pagination">
+                            <div class="slider-cheked__number">5/5</div>
+                            <div class="slider-cheked__line for"></div>
+                        </div>
+                        <div class="slider-cheked__row">
+                            <div class="slider-cheked__body">
+                               
+                                <h3 class="slider-cheked__title">Договор заключен между сторонами?</h3>
+                                <div class="slider-cheked__item">
+                                    <label for="radioСontract1" class="slider-cheked__radio-label">Да</label>
+                                    <input type="radio" id="radioСontract1" name="radioСontract" value="Да" class="slider-cheked__radio-input">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="radioСontract2" class="slider-cheked__radio-label">Нет</label>
+                                    <input type="radio" id="radioСontract2" name="radioСontract" value="Нет" class="slider-cheked__radio-input">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="radioСontract3" class="slider-cheked__radio-label">Затрудняюсь ответить</label>
+                                    <input type="radio" id="radioСontract3" name="radioСontract" value="Затрудняюсь ответить" class="slider-cheked__radio-input">
+                                </div>
+                                <div class="slider-cheked__button-row">
+                                    <div class="slider-cheked__buttom-back slider-cheked__buttom-back-scen buttom-back button">
+                                        <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
+                                    </div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next1 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss1">Пропустить</div>
+                                </div>
+                            </div>
+                            <div class="slider-cheked__row-card">
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card1.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Опыт работы 30 лет</p>
+                                </div>
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card2.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Разумная стоимость</p>
+                                </div> <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card3.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Работаем под ключ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="about__slide about__slider-cheked slider-cheked slider-cheked7 swiper-slide">
+                    <div class="slider-cheked__container">
+                        <div class="slider-cheked__row">
+                            <div class="slider-cheked__body">
+                                <h3 class="slider-cheked__title">Укажите комфортный способ связи</h3> 
+                                <div class="slider-cheked__item">
+                                    <div class="slider-cheked__error-text error-text">Заполните телефон:</div>
+                                    <label for="kwisForm" class="slider-cheked__label reqlab">Напишите свой номер телефона</label>
+                                    <input type="text" id="kwisForm" name="tel" class="slider-cheked__input tel text _req" placeholder="+7 (___) ___-__-__">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="checkboxConnect1" class="slider-cheked__checkbox-label" data-label-class="slider-cheked__checkbox-label">Телефонный разговор с адвокатом (+Бесплатная консультация)</label>
+                                    <input type="checkbox" id="checkboxConnect1" name="checkboxConnect1" value="Телефонный разговор с адвокатом (+Бесплатная консультация)" class="slider-cheked__checkbox-input">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="checkboxConnect2" class="slider-cheked__checkbox-label" data-label-class="slider-cheked__checkbox-label">WhatsApp</label>
+                                    <input type="checkbox" id="checkboxConnect2" name="checkboxConnect2" value="WhatsApp" class="slider-cheked__checkbox-input">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="checkboxConnect3" class="slider-cheked__checkbox-label" data-label-class="slider-cheked__checkbox-label">Telegram</label>
+                                    <input type="checkbox" id="checkboxConnect3" name="checkboxConnect3" value="Telegram" class="slider-cheked__checkbox-input">
+                                </div>
+                            
+                                <div class="slider-cheked__button-row">
+                                    <div class="slider-cheked__buttom-back buttom-back button">
+                                        <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
+                                    </div>
+                                    <button class="slider-cheked__buttom-send button">Готово!</button>
+                                </div>
+                            </div>
+                            <div class="slider-cheked__row-card">
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card1.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Опыт работы 30 лет</p>
+                                </div>
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card2.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Разумная стоимость</p>
+                                </div> <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card3.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Работаем под ключ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="about__slide about__slider-tranks slider-tranks swiper-slide">
+                    <div class="slider-tranks__container">
+                        <h3 class="slider-tranks__title">Ответы приняты в обработку, мы свяжемся
+                        </br>с вами в течение одного рабочего дня</h3>
+                        <div class="slider-tranks__text">Пока мы анализируем вашу ситуацию, переходите
+                        </br>в наш ТГ канал</div>
+                        <div class="slider-tranks__button-row">
+                            <a href="https://t.me/kodekspravo" class="slider-tranks__button button blue">Перейти в наш ТГ канал и посмотреть кейсы</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about__swiper swiper-scen swiper-scen4">
+            <div class="about__wrapper swiper-wrapper ">
+                <div class="about__slide about__slider-cheked slider-cheked slider-cheked4 swiper-slide">
+                    <div class="slider-cheked__container">
+                        <div class="slider-cheked__pagination">
+                            <div class="slider-cheked__number">2/4</div>
+                            <div class="slider-cheked__line fist"></div>
+                        </div>
+                        <div class="slider-cheked__row">
+                            <div class="slider-cheked__body">
+                                
+                                <h3 class="slider-cheked__title">Напишите номер вашего дела</h3>
+                                <div class="slider-cheked__item">
+                                    <label for="textSum" class="slider-cheked__label">Номер дела</label>
+                                    <input type="text" id="textSum" name="textNumberDocum" class="slider-cheked__input text">
+                                    <div class="slider-cheked__sub-text">*Например 2-3-34/2023.</div>
+                                </div>
+
+                                
+                                <div class="slider-cheked__button-row">
+                                    <div class="slider-cheked__buttom-back slider-cheked__buttom-back-scen buttom-back button">
+                                        <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
+                                    </div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next4 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss4">Пропустить</div>
+                                </div>
+                            </div>
+                            <div class="slider-cheked__row-card">
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card1.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Опыт работы 30 лет</p>
+                                </div>
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card2.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Разумная стоимость</p>
+                                </div> <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card3.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Работаем под ключ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="about__slide about__slider-cheked slider-cheked slider-cheked2 swiper-slide">
+                    <div class="slider-cheked__container">
+                        <div class="slider-cheked__pagination">
+                            <div class="slider-cheked__number">2/4</div>
+                            <div class="slider-cheked__line two"></div>
+                        </div>
+                        <div class="slider-cheked__row">
+                            <div class="slider-cheked__body">
+                               
+                                <h3 class="slider-cheked__title">Причина вашего обращения</h3>
+                                <div class="slider-cheked__item">
+                                    <label for="radioReason" class="slider-cheked__radio-label">Нет представителя в суде</label>
+                                    <input type="radio" id="radioReason" name="radioReason" value="Нет представителя в суде" class="slider-cheked__radio-input">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="radioReason2" class="slider-cheked__radio-label">Не устраивает квалификация представителя</label>
+                                    <input type="radio" id="radioReason2" name="radioReason" value="Не устраивает квалификация представителя" class="slider-cheked__radio-input">
+                                </div>
+                                <div class="slider-cheked__item">
+                                    <label for="radioReason3" class="slider-cheked__radio-label">Другое</label>
+                                    <input type="radio" id="radioReason3" name="radioReason" value="другое" class="slider-cheked__radio-input">
+                                </div>
+                                <div class="slider-cheked__button-row">
+                                    <div class="slider-cheked__buttom-back slider-cheked__buttom-back-scen buttom-back button">
+                                        <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
+                                    </div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next4 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss4">Пропустить</div>
+                                </div>
+                            </div>
+                            <div class="slider-cheked__row-card">
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card1.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Опыт работы 30 лет</p>
+                                </div>
+                                <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card2.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Разумная стоимость</p>
+                                </div> <div class="slider-cheked__card cheked-card">
+                                    <img src="@img/cheked-card3.svg" alt="" class="cheked-card__img">
+                                    <p class="cheked-card__text">Работаем под ключ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="about__slide about__slider-cheked slider-cheked slider-cheked4 swiper-slide">
+                    <div class="slider-cheked__container">
+                        <div class="slider-cheked__pagination">
+                            <div class="slider-cheked__number">3/4</div>
+                            <div class="slider-cheked__line for"></div>
+                        </div>
+                        <div class="slider-cheked__row">
+                            <div class="slider-cheked__body">
+                                
+                                <h3 class="slider-cheked__title">Напишите сумму задолженности</h3>
+                                <div class="slider-cheked__item">
+                                    <label for="textSum" class="slider-cheked__label">Сумма задолженности</label>
+                                    <input type="text" id="textSum" name="textSum" class="slider-cheked__input text">
+                                    <div class="slider-cheked__sub-text">*Например 1 000 000р.</div>
+                                </div>
+
+                                
+                                <div class="slider-cheked__button-row">
+                                    <div class="slider-cheked__buttom-back buttom-back button">
+                                        <img src="@img/icon-str.svg" alt="" class="buttom-back__img">
+                                    </div>
+                                    <div class="slider-cheked__buttom-next slider-cheked__buttom-next4 button">Далее</div>
+                                    <div class="slider-cheked__buttom-miss slider-cheked__buttom-miss4">Пропустить</div>
                                 </div>
                             </div>
                             <div class="slider-cheked__row-card">

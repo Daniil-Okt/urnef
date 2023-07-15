@@ -20,7 +20,7 @@ import BurgerMenu from './modules/BurgerMenu';
 
 // import { MousePRLX } from './libs/parallaxMouse'
 
-// import AOS from 'aos'
+import AOS from 'aos'
 
 import Swiper, { Navigation, Pagination } from 'swiper';
 
@@ -42,7 +42,7 @@ new BurgerMenu().init();
  *  Библиотека для анимаций
  *  документация: https://michalsnik.github.io/aos
  */
-// AOS.init();
+AOS.init();
 
 /** Параллакс мышей */
 // const mousePrlx = new MousePRLX({});
@@ -182,18 +182,106 @@ window.addEventListener("DOMContentLoaded", function() {
 
 
 
-const swiper = new Swiper('.about__swiper', {
-  speed: 400,
+const swiper = new Swiper('.swiper-first', {
+  speed: 0,
   spaceBetween: 100,
   modules: [Navigation],
   navigation: {
     nextEl:'.slider-cheked__buttom-next, .slider-cheked__buttom-miss, .slider-first__button',
     prevEl: '.slider-cheked__buttom-back',
   },
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
   touchRatio: false, 
   autoHeight: true,
 });
+const swiperS1 = new Swiper('.swiper-scen1', {
+  speed: 0,
+  spaceBetween: 100,
+  modules: [Navigation],
+  navigation: {
+    nextEl:'.slider-cheked__buttom-next1, .slider-cheked__buttom-miss1',
+    prevEl: '.slider-cheked__buttom-back',
+  },
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  touchRatio: false, 
+  autoHeight: true,
+});
+const swiperS2 = new Swiper('.swiper-scen2', {
+  speed: 0,
+  spaceBetween: 100,
+  modules: [Navigation],
+  navigation: {
+    nextEl:'.slider-cheked__buttom-next2, .slider-cheked__buttom-miss2',
+    prevEl: '.slider-cheked__buttom-back',
+  },
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  touchRatio: false, 
+  autoHeight: true,
+});
+const swiperS3 = new Swiper('.swiper-scen3', {
+  speed: 0,
+  spaceBetween: 100,
+  modules: [Navigation],
+  navigation: {
+    nextEl:'.slider-cheked__buttom-next3, .slider-cheked__buttom-miss3',
+    prevEl: '.slider-cheked__buttom-back',
+  },
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  touchRatio: false, 
+  autoHeight: true,
+});
+const swiperS4 = new Swiper('.swiper-scen4', {
+  speed: 0,
+  spaceBetween: 100,
+  modules: [Navigation],
+  navigation: {
+    nextEl:'.slider-cheked__buttom-next4, .slider-cheked__buttom-miss4',
+    prevEl: '.slider-cheked__buttom-back',
+  },
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  touchRatio: false, 
+  autoHeight: true,
+});
+// функционал квиза по сценариям
+const inputScen = document.querySelectorAll('.input-scen'); 
+const swiperScen = document.querySelectorAll('.swiper-scen'); 
+const swiperFirst = document.querySelector('.swiper-first'); 
+const buttonScen = document.querySelector('.slider-cheked__buttom-scen'); 
 
+buttonScen.addEventListener('click', () => {
+    swiperFirst.classList.add('_disablet')
+    for (let index = 0; index < swiperScen.length; index++) {
+      const swiper = swiperScen[index];
+      if (inputScen[index].checked) {
+        swiper.classList.add('_active')
+      }
+    }
+})
+const buttonBackScen = document.querySelectorAll('.slider-cheked__buttom-back-scen'); 
 
+  for (let index = 0; index < swiperScen.length; index++) {
+    buttonBackScen[index].addEventListener('click', () => {
+    const swiper = swiperScen[index];
+    if (inputScen[index].checked) {
+      swiper.classList.remove('_active')
+    }
+    swiperFirst.classList.remove('_disablet')
+  })
+}
 
 

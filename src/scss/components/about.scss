@@ -1,4 +1,5 @@
 .about {
+    overflow: hidden;
     @media(min-width:728px){
         max-height: 790px;
     }
@@ -366,8 +367,9 @@
         display: flex;
         flex-direction: column;
         gap: rem(20);
-        margin-top: rem(140);
+        margin-top: rem(60);
         @media(max-width:727px){
+            margin-top: rem(-40);
             align-items: center;
         }
     }
@@ -401,9 +403,12 @@
             
         }
     }
-    &__buttom-next {
+    &__buttom-next, &__buttom-scen {
         padding: rem(13) rem(17);
         max-width: rem(93);
+    }
+    &__buttom-scen { 
+        max-width: rem(180);
     }
     &__buttom-send {
         display: block;
@@ -489,8 +494,8 @@
     .slider-cheked__buttom-back {
         display: none;
     }
-    .slider-cheked__buttom-next {
-        margin-left: rem(50);
+    .slider-cheked__buttom-scen {
+        
     }
     .slider-cheked__button-row {
         @include adaptiveClamp(margin-top, 80, 40);
@@ -609,5 +614,35 @@
         display: block;
         max-width: rem(480);
         padding: rem(20) rem(30);
+    }
+}
+.swiper-scen {
+    display: none;
+}
+.swiper-scen._active {
+    display: block;
+}
+.swiper-first._disablet {
+    display: none;
+}
+
+.slider-cheked__line.fist {
+    &::before {
+        width: 33%;
+    }
+}
+.slider-cheked__line.two {
+    &::before {
+        width: 55%;
+    }
+}
+.slider-cheked__line.three {
+    &::before {
+        width: 80%;
+    }
+}
+.slider-cheked__line.for {
+    &::before {
+        width: 100%;
     }
 }

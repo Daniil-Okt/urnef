@@ -13,6 +13,21 @@
    $checkboxConnect1 = $_POST['checkboxConnect1'];
    $checkboxConnect2 = $_POST['checkboxConnect2'];
    $checkboxConnect3 = $_POST['checkboxConnect3'];
+   $textNumberDocum = $_POST['textNumberDocum'];
+   $radioReason = $_POST['radioReason'];
+   $textSpor = $_POST['textSpor'];
+   $radioClaim = $_POST['radioClaim'];
+   $textRequir = $_POST['textRequir'];
+   
+   $textNumberDocum = $_POST['textNumberDocum'];
+   $textNumberDocum = $_POST['textNumberDocum'];
+   $textNumberDocum = $_POST['textNumberDocum'];
+   $textNumberDocum = $_POST['textNumberDocum'];
+   $textNumberDocum = $_POST['textNumberDocum'];
+   $textNumberDocum = $_POST['textNumberDocum'];
+   $textNumberDocum = $_POST['textNumberDocum'];
+   $textNumberDocum = $_POST['textNumberDocum'];
+
   
    //Отправка в Telegram
   
@@ -37,6 +52,30 @@
 if ($radioStatus != '') {
   $message .= "Статус дела: $radioStatus\n";
 }
+if ($textNumberDocum != '') {
+  $message .= "Номер дела: $textNumberDocum\n";
+}
+if ($radioReason != '') {
+  $message .= "Причина обращения: $radioReason\n";
+}
+if ($textSpor != '') {
+  $message .= "Предмет спора: $textSpor\n";
+}
+if ($radioClaim != '') {
+  $message .= "Присылали ли притензии: $radioClaim\n";
+}
+if ($textRequir != '') {
+  $message .= "Сумма требования: $textRequir\n";
+}
+
+if ($textNumberDocum != '') {
+  $message .= "Номер дела: $textNumberDocum\n";
+}
+if ($textNumberDocum != '') {
+  $message .= "Номер дела: $textNumberDocum\n";
+}
+
+
 if ($radioСontract != '') {
   $message .= "Между сторонами заключен договор: $radioСontract\n";
 }
