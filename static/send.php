@@ -1,12 +1,14 @@
 <?php 
    $site = 'URNEFP';
    $phone = $_POST['tel'];
+   $phone = $_POST['tel4'];
    $mail = $_POST['mail'];
    $text = $_POST['text'];
    $radioStatus = $_POST['radioStatus'];
    $radioСontract = $_POST['radioСontract'];
    $radioDocument = $_POST['radioDocument'];
    $textSum = $_POST['textSum'];
+   $textSum2 = $_POST['textSum'];
    $radioRegistration = $_POST['radioRegistration'];
    $textCompany1 = $_POST['textCompany1'];
    $textCompany2 = $_POST['textCompany2'];
@@ -14,19 +16,12 @@
    $checkboxConnect2 = $_POST['checkboxConnect2'];
    $checkboxConnect3 = $_POST['checkboxConnect3'];
    $textNumberDocum = $_POST['textNumberDocum'];
+   $textNumberDocum2 = $_POST['textNumberDocum2'];
    $radioReason = $_POST['radioReason'];
+   $radioReason2 = $_POST['radioReason'];
    $textSpor = $_POST['textSpor'];
    $radioClaim = $_POST['radioClaim'];
    $textRequir = $_POST['textRequir'];
-   
-   $textNumberDocum = $_POST['textNumberDocum'];
-   $textNumberDocum = $_POST['textNumberDocum'];
-   $textNumberDocum = $_POST['textNumberDocum'];
-   $textNumberDocum = $_POST['textNumberDocum'];
-   $textNumberDocum = $_POST['textNumberDocum'];
-   $textNumberDocum = $_POST['textNumberDocum'];
-   $textNumberDocum = $_POST['textNumberDocum'];
-   $textNumberDocum = $_POST['textNumberDocum'];
 
   
    //Отправка в Telegram
@@ -41,6 +36,10 @@
   if ($phone != '') {
     $message .= "Телефон: $phone\n";
   }
+  if ($phone4 != '') {
+    $message .= "Телефон: $phone4\n";
+  }
+
   if ($mail != '') {
     $message .= "E-mail: $mail\n";
   }
@@ -52,38 +51,43 @@
 if ($radioStatus != '') {
   $message .= "Статус дела: $radioStatus\n";
 }
+
 if ($textNumberDocum != '') {
   $message .= "Номер дела: $textNumberDocum\n";
 }
+if ($textNumberDocum != '') {
+  $message .= "Номер дела: $textNumberDocum2\n";
+}
+
 if ($radioReason != '') {
   $message .= "Причина обращения: $radioReason\n";
 }
+if ($radioReason != '') {
+  $message .= "Причина обращения: $radioReason2\n";
+}
+
 if ($textSpor != '') {
   $message .= "Предмет спора: $textSpor\n";
 }
+
 if ($radioClaim != '') {
   $message .= "Присылали ли притензии: $radioClaim\n";
 }
 if ($textRequir != '') {
   $message .= "Сумма требования: $textRequir\n";
 }
-
-if ($textNumberDocum != '') {
-  $message .= "Номер дела: $textNumberDocum\n";
-}
-if ($textNumberDocum != '') {
-  $message .= "Номер дела: $textNumberDocum\n";
-}
-
-
 if ($radioСontract != '') {
   $message .= "Между сторонами заключен договор: $radioСontract\n";
 }
 if ($radioDocument != '') {
   $message .= "Закрывающие документы: $radioDocument\n";
 }
+
 if ($textSum != '') {
   $message .= "Сумма задолженности: $textSum\n";
+}
+if ($textSum != '') {
+  $message .= "Сумма задолженности: $textSum2\n";
 }
 if ($radioRegistration != '') {
   $message .= "Компания зарегистрирована: $radioRegistration\n";
