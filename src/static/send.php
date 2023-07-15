@@ -1,18 +1,63 @@
 <?php 
-   $site = 'GILDIA';
-   $name = $_POST['name'];
+   $site = 'URNEFP';
    $phone = $_POST['tel'];
+   $mail = $_POST['mail'];
+   $text = $_POST['text'];
+   $radioStatus = $_POST['radioStatus'];
+   $radioСontract = $_POST['radioСontract'];
+   $radioDocument = $_POST['radioDocument'];
+   $textSum = $_POST['textSum'];
+   $radioRegistration = $_POST['radioRegistration'];
+   $textCompany1 = $_POST['textCompany1'];
+   $textCompany2 = $_POST['textCompany2'];
+   $checkboxConnect1 = $_POST['checkboxConnect1'];
+   $checkboxConnect2 = $_POST['checkboxConnect2'];
+   $checkboxConnect3 = $_POST['checkboxConnect3'];
+  
    //Отправка в Telegram
   
-   $token = "6175032800:AAEjE6ZY2gFttQ6RC4peVyi7mou72IHciA4";
+   $token = "5993704145:AAFFkIdkwV2VznoZIY7Lhwaf_stBfE1Do0A";
    
-   $chat_id = "-862719183";
+   $chat_id = "-1001902841040";
    
   
    // Формирование текста сообщения
   $message = "Заявка с сайта: $site\n";
-  $message .= "Имя пользователя: $name\n";
-  $message .= "Телефон: $phone\n";
+  if ($phone != '') {
+    $message .= "Телефон: $phone\n";
+  }
+  if ($mail != '') {
+    $message .= "E-mail: $mail\n";
+  }
+  if ($text != '') {
+    $message .= "Комментарий: $text\n";
+  }
+  $message .= "------------------------------------------\n";
+  $message .= "__ОТВЕТЫ НА ВОПРОССЫ КВИЗА:__\n";
+if ($radioStatus != '') {
+  $message .= "Статус дела: $radioStatus\n";
+}
+if ($radioСontract != '') {
+  $message .= "Между сторонами заключен договор: $radioСontract\n";
+}
+if ($radioDocument != '') {
+  $message .= "Закрывающие документы: $radioDocument\n";
+}
+if ($textSum != '') {
+  $message .= "Сумма задолженности: $textSum\n";
+}
+if ($radioRegistration != '') {
+  $message .= "Компания зарегистрирована: $radioRegistration\n";
+}
+if ($textCompany1 != '') {
+  $message .= "ИНН компании: $textCompany1\n";
+}
+if ($textCompany2 != '') {
+  $message .= "ИНН компании контрагента: $textCompany2\n";
+}
+if ($checkboxConnect1 != '' || $checkboxConnect2 != ''|| $checkboxConnect3 ) {
+  $message .= "Хочу что бы со мной связались: $checkboxConnect1, $checkboxConnect2, $checkboxConnect3";
+}
   // Добавьте еще необходимые поля в сообщение, если нужно
   
   // Отправка запроса в Телеграм
@@ -41,51 +86,6 @@
     echo "Заявка успешно отправлена в Телеграм.";
   }
 
-
-// Файлы phpmailer
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
-require 'phpmailer/Exception.php';
-
-// Формирование самого письма
-$title = "GILDIA";
-$body = "
-<h2>Заявка с сайта</h2>
-<b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br>
-";
-// Настройки PHPMailer
-$mail = new PHPMailer\PHPMailer\PHPMailer();
-try {
-    $mail->isSMTP();   
-    $mail->CharSet = "UTF-8";
-    $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 2;
-    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
-
-    $mail->Host       = 'smtp.mail.ru'; 
-    $mail->Username   = 'web-prog-dn@mail.ru'; 
-    // 
-    $mail->Password   = '6W1EU4RUb7ptcmCvtHCQ';
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port       = 465;
-    $mail->setFrom('web-prog-dn@mail.ru', 'GILDIA'); 
-    // Получатель письма
-    $mail->addAddress('danikoktysyk@gmail.com');  
-
-// Отправка сообщения
-$mail->isHTML(true);
-$mail->Subject = $title;
-$mail->Body = $body;    
-
-// Проверяем отравленность сообщения
-if ($mail->send()) {$result = "success";} 
-else {$result = "error";}
-
-} catch (Exception $e) {
-    $result = "error";
-    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
-}
 
 // Отображение результата
 echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);

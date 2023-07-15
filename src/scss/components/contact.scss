@@ -1,0 +1,225 @@
+.contact {
+    position: relative;
+    @include adaptiveClamp(padding-bottom, 110, 40);
+    @include adaptiveClamp(padding-top, 81, 70);
+    &::before {
+        position: absolute;
+        content: '';
+        width: rem(361);
+        height: rem(768);
+        background: url(@img/contact-card-fon1.png) no-repeat center center / contain;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        @media(max-width:920px){
+            display: none;
+        }
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        width: rem(361);
+        height: rem(755);
+        background: url(@img/contact-card-fon2.png) no-repeat center center / contain;
+        bottom: 0;
+        right: rem(-20);
+        z-index: -1;
+        @media(max-width:920px){
+            display: none;
+        }
+    }
+    &__container {
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        @media(max-width:920px){
+            flex-direction: column;
+            row-gap: rem(30);
+        }
+    }
+
+    &__body {
+    }
+
+    &__card {
+    }
+}
+.contact-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(28);
+    margin-right: rem(50);
+    width: 100%;
+    @media(max-width:920px){
+        margin-right: 0;
+    }
+    &__title {
+    }
+
+    &__number {
+
+        a {
+            position: relative;
+            display: block;
+            font-weight: 700;
+            font-size: rem(30);
+            padding-left: rem(28);
+            transition: all 0.3s ease  0s;
+            &::before {
+                position: absolute;
+                content: '';
+                width: rem(20);
+                height: rem(20);
+                background: url(@img/icon-tel.svg) no-repeat center center / contain;
+                top:rem(10);
+                left: 0;
+            }
+            &:hover {
+                color: #0c506c;
+              }
+        }
+    }
+
+    &__sub-title {
+        margin-bottom: rem(10);
+    }
+
+    &__adress {
+        p {
+            max-width: rem(436);
+            
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(5);
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__circle {
+    }
+
+    &__text {
+        margin-left: rem(16);
+    }
+
+    &__social {
+    }
+}
+.contac-body {
+
+    &__email {
+        a {
+            font-weight: 700;
+            text-decoration: underline;
+            &:hover {
+                color: #0c506c;
+            }
+        }
+        
+    }
+}
+.social-contact {
+    display: flex;
+    gap: rem(10);
+    @media(max-width:1150px){
+        flex-wrap: wrap;
+    }
+    &__telegram {
+        flex: 0 1 50%;
+        display: flex;
+        align-items: center;
+        @media(max-width:1150px){
+            flex: 0 1 100%;
+        }
+    }
+
+    &__icon {
+        width: rem(40);
+        min-width: rem(40);
+        height: rem(40);
+        margin-right: rem(18);
+       
+        img {
+            
+            width: rem(20);
+        }
+    }
+
+    &__tel {
+        width: 100%;
+        color: #168FC0;
+    }
+    &__what {
+        width: 100%;
+        color: #2DB475;
+    }
+
+    &__whatapp {
+        display: flex;
+        flex: 0 1 50%;
+        align-items: center;
+        @media(max-width:1150px){
+            flex: 0 1 100%;
+        }
+    }
+}
+.quest-header {
+
+    &__icon {
+    }
+
+    &__icon-telegram {
+    }
+
+    &__icon-whatapp {
+    }
+}
+.contact-card {
+    max-width: rem(550px);
+    width: 100%;
+    @media(max-width:920px){
+        max-width: 100%;
+    }
+    &__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img {
+        flex: 0 1 50%;
+        width: 100%;
+        @media(max-width:920px){
+            margin: 0 rem(-15);
+            width: 108%;
+        }
+    }
+
+    &__frame-card {
+        flex: 0 1 50%;
+        iframe {
+            width: 100%;
+            @media(max-width:920px){
+                @include adaptiveClamp(height, 550, 172);
+            }
+        }
+        @media(max-width:920px){
+            margin: 0 rem(-15);
+            // width: 104%;
+        }
+    }
+
+    &__text {
+        margin-top: rem(25);
+        text-align: center;
+    }
+}

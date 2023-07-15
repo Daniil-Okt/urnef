@@ -21,7 +21,7 @@ export function validForm(form, popupTranks) {
                   if (response.ok) {
                     // Обработка успешной отправки формы
                     console.log('Form was submitted successfully!');
-                    if(form.id ='about__form') {
+                    if(form.id == 'about__form') {
                       document.querySelector('.button-slider-first').click()
                     } else {
                       popupTranks.classList.add('_is-open')

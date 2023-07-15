@@ -1,15 +1,33 @@
 .footer {
-  padding: rem(20) 0;
-  background: $blackColor;
+  padding: rem(30) 0;
+  background: #EEE;
+  border-top: 1px solid #8A8A8A;
+  @media(max-width:727px){
+    padding: rem(30);
+  }
 
   // .footer__container
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    @include media(510) {
+    @include media(720) {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
     }
+  }
+ p {
+  font-size: rem(15);
+  font-weight: 300;
+  color: #767676;
+ }
+  &__rights {
+
+  }
+
+  &__policy {
+    text-decoration: underline;
+    text-align: center;
   }
 }

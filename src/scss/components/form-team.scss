@@ -1,0 +1,203 @@
+.form-team {
+    padding-top: rem(48);
+    padding-bottom: rem(58);
+    background: url(@img/team-form-fon.png) no-repeat center center / cover;
+    @media(max-width:1100px){
+        background: none;
+    }
+    &__container {
+        display: flex;
+        gap: rem(22);
+        @media(max-width:1100px){
+            flex-direction: column;
+            gap: rem(20);
+        }
+    }
+
+    &__row {
+        display: flex;
+        // width: 100%;
+        row-gap: rem(20);
+        margin: 0 rem(-11);
+        @media(max-width:1100px){
+            // margin: 0;
+        }
+        @media(max-width:727px){
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        padding: 0 rem(11);
+        flex: 0 1 50%;
+        min-height: 100%;
+        @media(max-width:650px){
+            flex: 0 1 100%;
+        }
+    }
+
+    &__form {
+        min-width: rem(386);
+        max-width: rem(386);
+        border-radius: 5px;
+        border: 1px solid #D9D9D9;
+        @media(max-width:1100px){
+            max-width: rem(600);
+            min-width: none;
+            margin: 0 auto;
+        }
+        @media(max-width:650px){
+            max-width: 100%;
+            margin: 0;
+            min-width: 100%;
+        }
+    }
+
+    &__body {
+        padding: rem(30) rem(40);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(10);
+        @media(max-width:470px){
+            padding: rem(30) rem(17);
+        }
+    }
+
+    &__title {
+        max-width: rem(380);
+        margin: 0 auto;
+        text-align: center;
+        @include adaptiveClamp(font-size, 20, 20);
+    }
+
+    &__error-text {
+    }
+
+    &__label {
+        display: block;
+        font-size: rem(16);
+        margin-bottom: rem(10);
+    }
+
+    &__input {
+        display: block;
+        margin: 0;
+        @media(max-width:1100px){
+            min-width: 100%;
+            width: 100%;
+        }
+    }
+
+    &__textarea {
+        
+        @media(max-width:1100px){
+            max-width: 100%;
+        }
+    }
+    &__button {
+        font-size: rem(17);
+
+        font-weight: 700;
+        @media(max-width:1100px){
+            max-width: 100%;
+        }
+       
+    }
+    &__approval {
+        font-size: rem(11);
+        text-align: center;
+    }
+}
+.item-form-team {
+    min-height: 100%;
+    &__body {
+        padding: rem(30);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        row-gap: rem(20);
+        border-radius: 5px;
+        border: 1px solid #D9D9D9;
+        background: $whiteColor;
+    }
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__name {
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__text {
+        text-align: center;
+        flex: auto;
+    }
+
+    &__tel {
+        position: relative;
+        font-weight: 700;
+        padding-left: rem(28);
+        &::before {
+            position: absolute;
+            content: '';
+            width: rem(20);
+            height: rem(20);
+            background: url(@img/icon-tel.svg) no-repeat center center / contain;
+            top:rem(4.5);
+            left: 0;
+        }
+        &:hover {
+            color: #0c506c;
+        }
+    }
+}
+.error-text {
+}
+.reqlab {
+}
+.tel {
+}
+.text {
+}
+
+.popup-thanks {
+    position: fixed;
+    background-color: #0000009d;
+    display: flex;
+    align-items: center;
+    &__button-close {
+        position: absolute;
+        top: rem(10);
+        right: rem(10);
+        width: rem(25);
+        height: rem(25);
+    }
+}
+.popup-thanks .slider-tranks {
+        
+		&__container {
+            position: relative;
+            padding: rem(30);
+            background-color: $whiteColor;
+		}
+        
+		&__title {
+		}
+
+		&__text {
+		}
+
+		&__button-row {
+		}
+
+		&__button {
+		}
+}
+
+.button {
+}
+.blue {
+}

@@ -48,7 +48,7 @@ h1 {
     }
 }
 
-input.text {
+input.text, textarea {
     max-width: rem(408);
     width: 100%;
     padding: rem(20) rem(15);
@@ -60,10 +60,13 @@ input.text {
         border: 1px solid #1E8E31;
     }
 }
+textarea {
+    resize: none;
+}
 input._error {
     border: 1px solid #E60000;
 }
-input, input::placeholder {
+input, input::placeholder, textarea {
     font-size: rem(15);
 }
 ._ok input {
@@ -88,4 +91,8 @@ input, input::placeholder {
     ._ok & {
         color: #1E8E31;
     }
+}
+a {
+    transition: all 0.3s ease  0s;
+    cursor: pointer;
 }

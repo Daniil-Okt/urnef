@@ -59,7 +59,7 @@ new BurgerMenu().init();
  * На обертку(враппер) окна добавь класс _overlay-bg
  * На кнопку для закрытия окна добавь класс button-close
  */
-// togglePopupWindows();
+togglePopupWindows();
 
 // =======================================================================================================
 // const tabs = new Tabs('default-tabs', {});
@@ -77,15 +77,17 @@ useDynamicAdapt()
 * В константу записывает нужную форму
 * В переменную formNAME передаем форму
 * В переменную popupTranks передаем окно благодарности
-* Добавить класс _email на input type='mail'
+* Добавить класс _email на input type='email'
 * Добавить каласс _req на input которые нужно проверить
 * Добавить класс .popup-thanks для модального окна спасибо
   Раскоментировать для использования
 */ 
 import { validForm } from './modules/validFrom.js'
-// const popupTranks = document.querySelector('.popup-thanks')
+const popupTranks = document.querySelector('.popup-thanks')
 const formAbout = document.getElementById('about__form')
 validForm(formAbout)
+const formTeam = document.getElementById('form-team')
+validForm(formTeam, popupTranks)
 // =======================================================================================================
 
 
