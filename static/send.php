@@ -1,15 +1,12 @@
 <?php 
    $site = 'URNEFP';
    $phone = $_POST['tel'];
-   $phone = $_POST['tel4'];
    $mail = $_POST['mail'];
    $text = $_POST['text'];
    $radioStatus = $_POST['radioStatus'];
    $radioСontract = $_POST['radioСontract'];
-   $radioСontract2 = $_POST['radioСontract2'];
    $radioDocument = $_POST['radioDocument'];
    $textSum = $_POST['textSum'];
-   $textSum2 = $_POST['textSum'];
    $radioRegistration = $_POST['radioRegistration'];
    $textCompany1 = $_POST['textCompany1'];
    $textCompany2 = $_POST['textCompany2'];
@@ -17,9 +14,8 @@
    $checkboxConnect2 = $_POST['checkboxConnect2'];
    $checkboxConnect3 = $_POST['checkboxConnect3'];
    $textNumberDocum = $_POST['textNumberDocum'];
-   $textNumberDocum2 = $_POST['textNumberDocum2'];
    $radioReason = $_POST['radioReason'];
-   $radioReason2 = $_POST['radioReason'];
+   $radioReason2 = $_POST['radioReason2'];
    $textSpor = $_POST['textSpor'];
    $radioClaim = $_POST['radioClaim'];
    $textRequir = $_POST['textRequir'];
@@ -37,9 +33,9 @@
   if ($phone != '') {
     $message .= "Телефон: $phone\n";
   }
-  if ($phone4 != '') {
-    $message .= "Телефон: $phone4\n";
-  }
+  // if ($phone4 != '') {
+  //   $message .= "Телефон: $phone4\n";
+  // }
 
   if ($mail != '') {
     $message .= "E-mail: $mail\n";
@@ -56,15 +52,9 @@ if ($radioStatus != '') {
 if ($textNumberDocum != '') {
   $message .= "Номер дела: $textNumberDocum\n";
 }
-if ($textNumberDocum != '') {
-  $message .= "Номер дела: $textNumberDocum2\n";
-}
 
 if ($radioReason != '') {
   $message .= "Причина обращения: $radioReason\n";
-}
-if ($radioReason != '') {
-  $message .= "Причина обращения: $radioReason2\n";
 }
 
 if ($textSpor != '') {
@@ -89,9 +79,7 @@ if ($radioDocument != '') {
 if ($textSum != '') {
   $message .= "Сумма задолженности: $textSum\n";
 }
-if ($textSum != '') {
-  $message .= "Сумма задолженности: $textSum2\n";
-}
+
 if ($radioRegistration != '') {
   $message .= "Компания зарегистрирована: $radioRegistration\n";
 }
@@ -99,7 +87,7 @@ if ($textCompany1 != '') {
   $message .= "ИНН компании: $textCompany1\n";
 }
 if ($textCompany2 != '') {
-  $message .= "ИНН компании контрагента: $textCompany2\n";
+  $message .= "ИНН компании: $textCompany2\n";
 }
 if ($checkboxConnect1 != '' || $checkboxConnect2 != ''|| $checkboxConnect3 ) {
   $message .= "Хочу что бы со мной связались: $checkboxConnect1, $checkboxConnect2, $checkboxConnect3";
